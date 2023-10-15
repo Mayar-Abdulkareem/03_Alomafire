@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B453322A-2E97-4C42-A5CC-E73FA00D666F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D69468F-EEF1-444F-BC7A-76283F3F3604"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "03_URLSessionAndUICollection/Controllers/userVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4D69468F-EEF1-444F-BC7A-76283F3F3604 - c480d809757cb56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in _3_URLSessionAndUICollection.userVC.configureUI() -&gt; ()"
+                  moduleName = "03_URLSessionAndUICollection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fts/Desktop/Mayar/03_URLSessionAndUICollection/03_URLSessionAndUICollection/Controllers/userVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "99">
+               </Location>
+               <Location
+                  uuid = "4D69468F-EEF1-444F-BC7A-76283F3F3604 - dc4a644e8bc8d6c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in _3_URLSessionAndUICollection.userVC.configureUI() -&gt; ()"
+                  moduleName = "03_URLSessionAndUICollection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fts/Desktop/Mayar/03_URLSessionAndUICollection/03_URLSessionAndUICollection/Controllers/userVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "4D69468F-EEF1-444F-BC7A-76283F3F3604 - 46f0129abb79b7d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in _3_URLSessionAndUICollection.userVC.configureUI() -&gt; ()"
+                  moduleName = "03_URLSessionAndUICollection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fts/Desktop/Mayar/03_URLSessionAndUICollection/03_URLSessionAndUICollection/Controllers/userVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "4D69468F-EEF1-444F-BC7A-76283F3F3604 - a4341419cd975595"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in _3_URLSessionAndUICollection.userVC.configureUI() -&gt; ()"
+                  moduleName = "03_URLSessionAndUICollection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fts/Desktop/Mayar/03_URLSessionAndUICollection/03_URLSessionAndUICollection/Controllers/userVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
