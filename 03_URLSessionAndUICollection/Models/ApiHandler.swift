@@ -34,32 +34,24 @@ class ApiHandler {
     }
     
     func getUser(userName: String, completion: @escaping (Result<GitHubUser, Error>) -> Void) {
-        let endpoint = "https://api.github.com/users/\(userName)"
+        guard let endpoint = URL(string: "https://api.github.com/users/\(userName)") else {
+            completion(.failure(GHError.invalidURL))
+            return
+        }
         
-        AF.request(endpoint).responseJSON { response in
-            switch response.result {
-            case .success:
-                if let statusCode = response.response?.statusCode, statusCode == 200 {
-                    if let data = response.data {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        do {
-                            let user = try decoder.decode(GitHubUser.self, from: data)
-                            completion(.success(user))
-                        } catch {
-                            completion(.failure(GHError.invalidData))
-                        }
-                    } else {
-                        completion(.failure(GHError.invalidData))
-                    }
-                } else {
-                    let error = self.determineError(response.response?.statusCode)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        AF.request(endpoint)
+            .validate(statusCode: Set([200]))
+            .responseDecodable(of: GitHubUser.self, decoder: decoder) { response in
+                switch response.result {
+                case .success(let user):
+                    completion(.success(user))
+                case .failure(let error):
                     completion(.failure(error))
                 }
-            case .failure(let error):
-                completion(.failure(error))
             }
-        }
     }
         
     func getFollowers(url: String, completion: @escaping (Result<[GitHubFollower], Error>) -> Void) {
@@ -67,41 +59,20 @@ class ApiHandler {
             completion(.failure(GHError.invalidURL))
             return
         }
-
-        AF.request(followerURL).validate().responseJSON { response in
-            switch response.result {
-            case .success:
-                guard let data = response.data else {
-                    completion(.failure(GHError.invalidData))
-                    return
-                }
-                
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let followers = try decoder.decode([GitHubFollower].self, from: data)
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        AF.request(followerURL)
+            .validate(statusCode: Set([200]))
+            .responseDecodable(of: [GitHubFollower].self, decoder: decoder) { response in
+                switch response.result {
+                case .success(let followers):
                     completion(.success(followers))
-                } catch {
+                    
+                case .failure(let error):
                     completion(.failure(error))
                 }
-                
-            case .failure(let error):
-                completion(.failure(error))
             }
-        }
     }
-    
-    private func determineError(_ statusCode: Int?) -> GHError {
-        if let statusCode = statusCode {
-            switch statusCode {
-            case 404: return GHError.resourceNotFound
-            case 422: return GHError.validationFailed
-            default: return GHError.invalidResponse
-            }
-        } else {
-            return GHError.invalidResponse
-        }
-    }
-
-    
 }
