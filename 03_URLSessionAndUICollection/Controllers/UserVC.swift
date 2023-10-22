@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserVC: BaseViewController {
+class UserVC: UIViewController {
     
     static let id = "userVCID"
     var user: GitHubUser!
@@ -54,4 +54,5 @@ class UserVC: BaseViewController {
             }
         }
     }
+    
 }

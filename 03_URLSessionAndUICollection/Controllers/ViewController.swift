@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class ViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     
@@ -23,17 +23,17 @@ class ViewController: BaseViewController {
         view.addSubview(activityIndicator)
     }
     
-    private func activateActivityIndicator(isActive: Bool) {
-        if isActive {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
+    private func showActivityIndicator() {
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
     }
     
     @IBAction func submitBtnTapped(_ sender: Any) {
         configureActivityIndicator()
-        activateActivityIndicator(isActive: true)
+        showActivityIndicator()
         ApiHandler.sharedInstance.getUser(userName: userName.text ?? "SAllen0400") { result in
             switch result {
             case .success(let user):
@@ -44,7 +44,23 @@ class ViewController: BaseViewController {
                 self.showAlert(alertModel: AlertModel(title: "Failure", msg: "\(error)"))
             }
         }
-        activateActivityIndicator(isActive: false)
+        hideActivityIndicator()
+    }
+    
+}
+
+struct AlertModel {
+    let title: String
+    let msg: String
+}
+
+extension UIViewController {
+    func showAlert(alertModel: AlertModel) {
+        let alertController = UIAlertController(title: alertModel.title, message: alertModel.msg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
