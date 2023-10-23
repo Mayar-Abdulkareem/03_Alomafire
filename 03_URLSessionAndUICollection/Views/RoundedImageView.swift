@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RoundedImageView: UIImageView {
     
@@ -15,5 +16,4 @@ class RoundedImageView: UIImageView {
         layer.cornerRadius = cornerRadius
         clipsToBounds = true
     }
-    
 }

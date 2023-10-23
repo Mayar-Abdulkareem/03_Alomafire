@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GHError: Error {
+enum Errors: Error {
     case invalidURL
     case resourceNotFound
     case validationFailed

@@ -12,7 +12,7 @@
         <!--GitHub-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_3_URLSessionAndUICollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_3_Alomafire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,15 +77,15 @@
         <!--UserVC-->
         <scene sceneID="KCb-WF-w5p">
             <objects>
-                <viewController storyboardIdentifier="userVCID" id="4Uo-6q-TQl" customClass="UserVC" customModule="_3_URLSessionAndUICollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userVCID" id="4Uo-6q-TQl" customClass="UserVC" customModule="_3_Alomafire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FUY-Db-nCQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-IZ-2dp">
-                                <rect key="frame" x="136.66666666666666" y="79.000000000000014" width="119.99999999999997" height="150.33333333333337"/>
+                                <rect key="frame" x="136.66666666666666" y="79" width="119.99999999999997" height="154"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-kb-zee" customClass="RoundedImageView" customModule="_3_URLSessionAndUICollection" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-kb-zee" customClass="RoundedImageView" customModule="_3_Alomafire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="MzP-JP-gCM"/>
@@ -93,24 +93,24 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lU-YH-74L" userLabel="name">
-                                        <rect key="frame" x="39.333333333333343" y="130" width="41.333333333333343" height="20.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="34.333333333333343" y="130" width="51.333333333333343" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pGi-e7-aBc">
-                                <rect key="frame" x="50" y="279.33333333333331" width="293" height="60.666666666666686"/>
+                                <rect key="frame" x="50" y="283" width="293" height="60.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfr-zi-PRU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfr-zi-PRU">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FollowersCount Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBe-d5-jXu">
-                                        <rect key="frame" x="0.0" y="40.333333333333371" width="293" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="40.333333333333314" width="293" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -118,9 +118,17 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-Au-P7j">
-                                <rect key="frame" x="50" y="733.66666666666663" width="293" height="34.333333333333371"/>
+                                <rect key="frame" x="50" y="740" width="293" height="28"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Get Followers">
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get Followers">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -156,12 +164,12 @@
         <!--FollowerVC-->
         <scene sceneID="hiZ-8Y-14W">
             <objects>
-                <viewController storyboardIdentifier="followerVCID" id="Fy1-O8-vxf" customClass="FollowerVC" customModule="_3_URLSessionAndUICollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followerVCID" id="Fy1-O8-vxf" customClass="FollowerVC" customModule="_3_Alomafire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hdE-2f-UBv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-7b-H9B">
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-7b-H9B">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -184,14 +192,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="followerCell" id="Alh-mN-Gji" customClass="FollowerCollectionViewCell" customModule="_3_URLSessionAndUICollection" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="followerCell" id="Alh-mN-Gji" customClass="FollowerCollectionViewCell" customModule="_3_Alomafire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sac-eq-4ve">
                                             <rect key="frame" x="0.0" y="0.0" width="141" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-nu-uuf" customClass="RoundedImageView" customModule="_3_URLSessionAndUICollection" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-nu-uuf" customClass="RoundedImageView" customModule="_3_Alomafire" customModuleProvider="target">
                                                     <rect key="frame" x="31.666666666666664" y="10" width="77.666666666666686" height="73"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jk-xR-DfB">
@@ -216,7 +224,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="141" height="133"/>
                                         <connections>
-                                            <outlet property="followerImg" destination="NgS-nu-uuf" id="hvP-Yw-UJ5"/>
+                                            <outlet property="followerImg" destination="NgS-nu-uuf" id="wGK-GE-ROV"/>
                                             <outlet property="followerName" destination="8jk-xR-DfB" id="P2u-Pg-2Kn"/>
                                         </connections>
                                     </collectionViewCell>

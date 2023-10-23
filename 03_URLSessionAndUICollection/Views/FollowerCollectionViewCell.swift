@@ -14,7 +14,8 @@ struct FollowerCellModel {
 
 class FollowerCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var followerImg: UIImageView!
+    
+    @IBOutlet weak var followerImg: RoundedImageView!
     @IBOutlet weak var followerName: UILabel!
     
     static var id = "followerCell"
@@ -26,7 +27,7 @@ class FollowerCollectionViewCell: UICollectionViewCell {
     func configureCell(model: FollowerCellModel) {
         followerName.text = model.name
         
-        ApiHandler.sharedInstance.loadImageFromURLAsync(model.avatarUrl) { result in
+        ImageUtility.shared.loadImageFromURLAsync(model.avatarUrl) { result in
             switch result {
             case .success(let image):
                 self.followerImg.image = image
@@ -35,5 +36,4 @@ class FollowerCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
 }

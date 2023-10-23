@@ -9,24 +9,22 @@ import UIKit
 
 class UserVC: UIViewController {
     
-    static let id = "userVCID"
-    var user: GitHubUser!
-    var followersCount: Int = 0
-    var followers: [GitHubFollower] = []
-    
     @IBOutlet weak var avatarImage: RoundedImageView!
     @IBOutlet weak var loginName: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
+    static let id = "userVCID"
+    var user: GitHubUser!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImage()
-        configureUI()
+        configureUILabel()
     }
     
     private func fetchImage() {
-        ApiHandler.sharedInstance.loadImageFromURLAsync(user.avatarUrl) { result in
+        ImageUtility.shared.loadImageFromURLAsync(user.avatarUrl) { result in
             switch result {
             case .success(let image):
                 self.avatarImage.image = image
@@ -36,23 +34,30 @@ class UserVC: UIViewController {
         }
     }
     
-    private func configureUI() {
+    private func configureUILabel() {
         loginName.text = user.name
         bioLabel.text = user.bio
-        countLabel.text = "\(user.name) has \(user.followers) followers"
+
+        let attributedText = NSMutableAttributedString(string: "\(user.name) has \(user.followers) followers")
+        let range = (attributedText.string as NSString).range(of: String(user.followers))
+        attributedText.addAttributes([.font: UIFont.boldSystemFont(ofSize: 16)], range: range)
+        countLabel.attributedText = attributedText
     }
     
     @IBAction func getFollowersBtnTapped(_ sender: Any) {
-        ApiHandler.sharedInstance.getFollowers(url: user.followersUrl) { result in
+        NetworkClient.sharedInstance.getFollowers(url: user.followersUrl) { result in
             switch result {
             case .success(let followers):
-                let destVC = self.storyboard?.instantiateViewController(withIdentifier: FollowerVC.id) as! FollowerVC
-                destVC.followers = followers
-                self.navigationController?.pushViewController(destVC, animated: true)
+                let destVC = self.storyboard?.instantiateViewController(withIdentifier: FollowerVC.id) as? FollowerVC
+                destVC?.followers = followers
+                if let navigationController = self.navigationController, let followerVC = destVC {
+                    navigationController.pushViewController(followerVC, animated: true)
+                } else {
+                    self.showAlert(alertModel: AlertModel(title: "Failure", msg: "Failed to push the followerVC."))
+                }
             case .failure(let error):
                 self.showAlert(alertModel: AlertModel(title: "Failure", msg: "\(error)"))
             }
         }
     }
-    
 }
