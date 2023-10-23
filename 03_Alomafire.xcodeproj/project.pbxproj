@@ -20,7 +20,7 @@
 		2F5C298C2ACB21CA0027CC94 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C298B2ACB21CA0027CC94 /* UserVC.swift */; };
 		2F5C29902ACB5A400027CC94 /* FollowerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C298F2ACB5A400027CC94 /* FollowerVC.swift */; };
 		2F5C29922ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C29912ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift */; };
-		2F5C2A282AD59BD40027CC94 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C2A272AD59BD40027CC94 /* ApiHandler.swift */; };
+		2F5C2A282AD59BD40027CC94 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C2A272AD59BD40027CC94 /* NetworkClient.swift */; };
 		2F5C2A2D2AE659DF0027CC94 /* UIViewControllerExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C2A2C2AE659DF0027CC94 /* UIViewControllerExtension .swift */; };
 		2F5C2A2F2AE65BB00027CC94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C2A2E2AE65BB00027CC94 /* Constants.swift */; };
 		2F5C2A322AE665F80027CC94 /* ImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C2A312AE665F80027CC94 /* ImageUtility.swift */; };
@@ -43,7 +43,7 @@
 		2F5C298B2ACB21CA0027CC94 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		2F5C298F2ACB5A400027CC94 /* FollowerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerVC.swift; sourceTree = "<group>"; };
 		2F5C29912ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCell.swift; sourceTree = "<group>"; };
-		2F5C2A272AD59BD40027CC94 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		2F5C2A272AD59BD40027CC94 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		2F5C2A2C2AE659DF0027CC94 /* UIViewControllerExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerExtension .swift"; sourceTree = "<group>"; };
 		2F5C2A2E2AE65BB00027CC94 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F5C2A312AE665F80027CC94 /* ImageUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtility.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		2F5C2A2A2AE5191F0027CC94 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2F5C2A272AD59BD40027CC94 /* ApiHandler.swift */,
+				2F5C2A272AD59BD40027CC94 /* NetworkClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 				2F5C2A2F2AE65BB00027CC94 /* Constants.swift in Sources */,
 				2F5C296E2ACAE9690027CC94 /* _3_URLSessionAndUICollection.xcdatamodeld in Sources */,
 				2F5C29662ACAE9690027CC94 /* SceneDelegate.swift in Sources */,
-				2F5C2A282AD59BD40027CC94 /* ApiHandler.swift in Sources */,
+				2F5C2A282AD59BD40027CC94 /* NetworkClient.swift in Sources */,
 				2F5C2A2D2AE659DF0027CC94 /* UIViewControllerExtension .swift in Sources */,
 				2F5C29842ACAFF820027CC94 /* ErrorsModel.swift in Sources */,
 			);

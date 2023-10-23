@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     private func configureActivityIndicator() {
         activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped =  true
+        activityIndicator.hidesWhenStopped = true
         view.addSubview(activityIndicator)
     }
     

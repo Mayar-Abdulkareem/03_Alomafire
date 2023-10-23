@@ -84,5 +84,4 @@ extension FollowerVC: UISearchBarDelegate {
         filteredFollowers.removeAll()
         collectionView.reloadData()
     }
-    
 }
