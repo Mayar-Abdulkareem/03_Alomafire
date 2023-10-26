@@ -13,10 +13,10 @@ class FollowerVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var noResultsLabel: UILabel!
     
-    static var id = "followerVCID"
-    var followers: [GitHubFollower]!
-    var filteredFollowers: [GitHubFollower] = []
-    var isSearching: Bool {
+    static let id = "followerVCID"
+    private var filteredFollowers: [GitHubFollower] = []
+    var viewModel: FollowerViewModel?
+    private var isSearching: Bool {
         return searchBar.text?.count ?? 0 != 0
     }
     
@@ -29,15 +29,18 @@ class FollowerVC: UIViewController {
 extension FollowerVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return !isSearching ? followers.count : filteredFollowers.count
+        guard let viewModel = self.viewModel else {return 0}
+        return !isSearching ? viewModel.followers.count : filteredFollowers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard ((isSearching && indexPath.row < filteredFollowers.count) || (!isSearching && indexPath.row < followers.count)) else {
+        guard let viewModel = self.viewModel,
+              (isSearching && indexPath.row < filteredFollowers.count) || (!isSearching && indexPath.row < viewModel.followers.count)
+        else {
             return UICollectionViewCell()
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCollectionViewCell.id, for: indexPath) as? FollowerCollectionViewCell
-        let follower = !isSearching ? followers[indexPath.row] : filteredFollowers[indexPath.row]
+        let follower = !isSearching ? viewModel.followers[indexPath.row] : filteredFollowers[indexPath.row]
         let followerModel = FollowerCellModel(name: follower.login, avatarUrl: follower.avatarUrl)
         cell?.configureCell(model: followerModel)
         return cell ?? UICollectionViewCell()
@@ -60,11 +63,11 @@ extension FollowerVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBar.showsCancelButton = true
-        guard searchText.count != 0 else {
+        guard let viewModel = self.viewModel, searchText.count != 0 else {
             clearAndShowAllFollowers()
             return
         }
-        filteredFollowers = followers.filter { follower in
+        filteredFollowers = viewModel.followers.filter { follower in
             return follower.login.lowercased().contains(searchText.lowercased())
         }
         noResultsLabel.isHidden = !(filteredFollowers.count == 0)

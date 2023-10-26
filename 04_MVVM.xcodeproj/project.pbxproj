@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5B05BA2AE7E7BC0075D083 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B05B92AE7E7BC0075D083 /* LoginViewModel.swift */; };
+		2F5B05C32AE7E8940075D083 /* FollowerCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B05C22AE7E8940075D083 /* FollowerCollectionViewCellViewModel.swift */; };
+		2F5B05C52AE80A620075D083 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B05C42AE80A620075D083 /* UserViewModel.swift */; };
+		2F5B05C72AE828230075D083 /* FollowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B05C62AE828230075D083 /* FollowerViewModel.swift */; };
 		2F5C29642ACAE9690027CC94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C29632ACAE9690027CC94 /* AppDelegate.swift */; };
 		2F5C29662ACAE9690027CC94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C29652ACAE9690027CC94 /* SceneDelegate.swift */; };
 		2F5C29682ACAE9690027CC94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C29672ACAE9690027CC94 /* ViewController.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5B05B92AE7E7BC0075D083 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2F5B05C22AE7E8940075D083 /* FollowerCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		2F5B05C42AE80A620075D083 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2F5B05C62AE828230075D083 /* FollowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewModel.swift; sourceTree = "<group>"; };
 		2F5C29602ACAE9690027CC94 /* 03_Alomafire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_Alomafire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5C29632ACAE9690027CC94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F5C29652ACAE9690027CC94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2F5B05B82AE7E79F0075D083 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F5C29672ACAE9690027CC94 /* ViewController.swift */,
+				2F5B05B92AE7E7BC0075D083 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2F5B05BB2AE7E7DA0075D083 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2F5C298B2ACB21CA0027CC94 /* UserVC.swift */,
+				2F5B05C42AE80A620075D083 /* UserViewModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		2F5B05BE2AE7E80B0075D083 /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				2F5C298F2ACB5A400027CC94 /* FollowerVC.swift */,
+				2F5B05C62AE828230075D083 /* FollowerViewModel.swift */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		2F5B05C12AE7E8410075D083 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2F5C29912ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift */,
+				2F5B05C22AE7E8940075D083 /* FollowerCollectionViewCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2F5C29572ACAE9690027CC94 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +141,15 @@
 				2F5C2A2E2AE65BB00027CC94 /* Constants.swift */,
 				2F5C29632ACAE9690027CC94 /* AppDelegate.swift */,
 				2F5C29652ACAE9690027CC94 /* SceneDelegate.swift */,
+				2F5C29692ACAE9690027CC94 /* Main.storyboard */,
+				2F5C297F2ACAEF2F0027CC94 /* RoundedImageView.swift */,
+				2F5B05B82AE7E79F0075D083 /* Login */,
+				2F5B05BB2AE7E7DA0075D083 /* User */,
+				2F5B05BE2AE7E80B0075D083 /* Follower */,
+				2F5B05C12AE7E8410075D083 /* Cells */,
 				2F5C2A302AE665D60027CC94 /* Utilities */,
 				2F5C2A2B2AE659960027CC94 /* Etensions */,
 				2F5C2A2A2AE5191F0027CC94 /* Network */,
-				2F5C297C2ACAE9AC0027CC94 /* Controllers */,
-				2F5C297B2ACAE9A00027CC94 /* Views */,
 				2F5C297A2ACAE9910027CC94 /* Models */,
 				2F5C296F2ACAE96B0027CC94 /* Assets.xcassets */,
 				2F5C29712ACAE96B0027CC94 /* LaunchScreen.storyboard */,
@@ -114,6 +162,7 @@
 		2F5C297A2ACAE9910027CC94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2F5C297B2ACAE9A00027CC94 /* Views */,
 				2F5C29832ACAFF820027CC94 /* ErrorsModel.swift */,
 				2F5C29812ACAFBDC0027CC94 /* GitHubUserModel.swift */,
 			);
@@ -123,21 +172,8 @@
 		2F5C297B2ACAE9A00027CC94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2F5C29692ACAE9690027CC94 /* Main.storyboard */,
-				2F5C297F2ACAEF2F0027CC94 /* RoundedImageView.swift */,
-				2F5C29912ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2F5C297C2ACAE9AC0027CC94 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2F5C29672ACAE9690027CC94 /* ViewController.swift */,
-				2F5C298B2ACB21CA0027CC94 /* UserVC.swift */,
-				2F5C298F2ACB5A400027CC94 /* FollowerVC.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		2F5C2A2A2AE5191F0027CC94 /* Network */ = {
@@ -209,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2F5C295B2ACAE9690027CC94 /* Build configuration list for PBXProject "03_Alomafire" */;
+			buildConfigurationList = 2F5C295B2ACAE9690027CC94 /* Build configuration list for PBXProject "04_MVVM" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -290,14 +326,18 @@
 				2F5C2A322AE665F80027CC94 /* ImageUtility.swift in Sources */,
 				2F5C29922ACBF2CC0027CC94 /* FollowerCollectionViewCell.swift in Sources */,
 				2F5C29682ACAE9690027CC94 /* ViewController.swift in Sources */,
+				2F5B05C32AE7E8940075D083 /* FollowerCollectionViewCellViewModel.swift in Sources */,
 				2F5C29802ACAEF2F0027CC94 /* RoundedImageView.swift in Sources */,
 				2F5C298C2ACB21CA0027CC94 /* UserVC.swift in Sources */,
 				2F5C29642ACAE9690027CC94 /* AppDelegate.swift in Sources */,
+				2F5B05C52AE80A620075D083 /* UserViewModel.swift in Sources */,
 				2F5C29822ACAFBDC0027CC94 /* GitHubUserModel.swift in Sources */,
 				2F5C29902ACB5A400027CC94 /* FollowerVC.swift in Sources */,
+				2F5B05BA2AE7E7BC0075D083 /* LoginViewModel.swift in Sources */,
 				2F5C2A2F2AE65BB00027CC94 /* Constants.swift in Sources */,
 				2F5C296E2ACAE9690027CC94 /* _3_URLSessionAndUICollection.xcdatamodeld in Sources */,
 				2F5C29662ACAE9690027CC94 /* SceneDelegate.swift in Sources */,
+				2F5B05C72AE828230075D083 /* FollowerViewModel.swift in Sources */,
 				2F5C2A282AD59BD40027CC94 /* NetworkClient.swift in Sources */,
 				2F5C2A2D2AE659DF0027CC94 /* UIViewControllerExtension .swift in Sources */,
 				2F5C29842ACAFF820027CC94 /* ErrorsModel.swift in Sources */,
@@ -499,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F5C295B2ACAE9690027CC94 /* Build configuration list for PBXProject "03_Alomafire" */ = {
+		2F5C295B2ACAE9690027CC94 /* Build configuration list for PBXProject "04_MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F5C29752ACAE96B0027CC94 /* Debug */,
